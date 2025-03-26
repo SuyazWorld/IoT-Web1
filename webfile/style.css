@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background: #1E1E1E;
+    color: #E0C097;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* HEADER */
+.header {
+    background: #3E3232;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Tambahkan padding agar lebih lega */
+    width: 100%;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 10px; /* Beri jarak dari tepi */
+}
+
+.nav {
+    display: flex;
+    gap: 15px; /* Beri jarak antar menu */
+    padding-right: 10px; /* Jarak dari tepi kanan */
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px; /* Tambahkan padding agar lebih proporsional */
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* CONTAINER */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+    flex: 1;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* LED button container */
+.led-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    gap: 10px; /* Jarak antar tombol */
+    width: 100%;
+    max-width: 300px; /* Sesuaikan jika perlu */
+    margin: 0 auto; /* Pusatkan */
+}
+
+/* servo submit div */
+/* Bungkus input dan tombol dalam flexbox */
+.servosubmit11, .servosubmit22 {
+    display: flex;
+    align-items: center; /* Pastikan vertikal sejajar */
+    gap: 10px; /* Jarak antara input dan tombol */
+    justify-content: center;
+}
+
+/* Styling untuk input */
+.servosubmit11 input, .servosubmit22 input {
+    width: 120px; /* Sesuaikan dengan ukuran yang diinginkan */
+    height: 40px; /* Tinggi tetap */
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #E0C097;
+    border-radius: 5px;
+    background: #3E3E3E;
+    color: #E0C097;
+    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling untuk tombol submit */
+.servosubmit11 button, .servosubmit22 button {
+    height: 40px; /* Samakan dengan input */
+    padding: 0 15px; /* Hanya padding samping */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #E0C097;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Hindari perubahan ukuran */
+}
+
+/* Hover efek */
+.servosubmit11 button:hover, .servosubmit22 button:hover {
+    background-color: #C1976B;
+}
+
+/* kotak div sensor */
+.kotakdivzz {
+    margin-top: 20px;
+}
+
+/* kotak sensor */
+.sensorzz {
+    border: 3px solid #E0C097;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* SECTION STYLE */
+section {
+    background: #2A2A2A;
+    padding: 20px; /* Tambahkan padding agar lebih lega */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+h2 {
+    color: #FFD700;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Tambahkan margin bawah */
+}
+
+/* ICON */
+.section-icon {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+/* STATUS TEXT */
+.status-text {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px; /* Tambahkan margin atas */
+}
+
+.status-text.online {
+    color: gold;
+}
+
+.status-text.offline {
+    color: red;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #E0C097;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px; /* Tambahkan margin agar tidak terlalu rapat */
+}
+
+button:hover {
+    background-color: #C1976B;
+}
+
+/* SERVO CONTROL */
+.servo-control {
+    margin-top: 15px; /* Tambahkan margin atas */
+    text-align: center;
+}
+
+.servo-control label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.servo-control input {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #E0C097;
+    border-radius: 5px;
+    text-align: center;
+    background: #3E3E3E;
+    color: #E0C097;
+    margin-top: 5px; /* Beri sedikit jarak antara label dan input */
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 12px;
+    background: #3E3232;
+    color: white;
+    width: 100%;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    /* HEADER RESPONSIVE */
+    .header {
+        padding: 12px 15px; /* Sedikit kurangi padding di layar kecil */
+    }
+
+    .logo {
+        font-size: 18px;
+        padding-left: 5px; /* Beri sedikit jarak */
+    }
+
+    .nav {
+        gap: 10px;
+        padding-right: 5px; /* Kurangi jarak dari tepi kanan */
+    }
+
+    .nav a {
+        font-size: 14px;
+        padding: 3px 8px; /* Sesuaikan padding agar tetap rapi */
+    }
+
+    /* GRID JADI KOLOM SAAT MOBILE */
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .servo-control input {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .section-icon {
+        width: 100px;
+    }
+}
